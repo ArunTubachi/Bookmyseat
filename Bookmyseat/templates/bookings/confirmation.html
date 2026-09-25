@@ -1,0 +1,3 @@
+{% extends 'base.html' %}
+{% block title %}Booking confirmed | BookMySeat{% endblock %}
+{% block content %}<section class="confirmation"><p class="eyebrow">Booking confirmed</p><h1>You're all set.</h1><p class="muted">Booking #{{ booking.id }} · {{ booking.booked_at|date:'M j, Y g:i A' }}</p><div class="ticket"><h2>{{ booking.show.movie.title }}</h2><p>{{ booking.show.theatre.name }}, {{ booking.show.theatre.location }}</p><p>{{ booking.show.date|date:'l, F j, Y' }} · {{ booking.show.time|time:'g:i A' }}</p><p><strong>Seats:</strong> {% for seat in booking.seats.all %}{{ seat.number }}{% if not forloop.last %}, {% endif %}{% endfor %}</p></div><a class="button" href="{% url 'profile' %}">Go to profile</a></section>{% endblock %}

@@ -1,0 +1,3 @@
+{% extends 'base.html' %}
+{% block title %}Movies | BookMySeat{% endblock %}
+{% block content %}<div class="page-heading"><p class="eyebrow">The lineup</p><h1>Movies</h1><p>Choose a movie to see theatres and showtimes.</p></div><div class="movie-grid">{% for movie in movies %}{% include 'movies/card.html' %}{% empty %}<p class="empty">No movies available yet.</p>{% endfor %}</div>{% endblock %}

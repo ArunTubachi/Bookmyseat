@@ -1,0 +1,3 @@
+{% extends 'base.html' %}
+{% block title %}BookMySeat | Movies{% endblock %}
+{% block content %}<section class="hero"><p class="eyebrow">Your next night out</p><h1>Find a film.<br><em>Pick your seats.</em></h1><p>Browse what is playing and reserve your favourite seats in a few simple steps.</p><a class="button" href="{% url 'movie_list' %}">Browse movies</a></section><section class="section-heading"><h2>Now showing</h2><a href="{% url 'movie_list' %}">View all</a></section><div class="movie-grid">{% for movie in movies %}{% include 'movies/card.html' %}{% empty %}<p class="empty">Add movies from the admin panel to get started.</p>{% endfor %}</div>{% endblock %}
