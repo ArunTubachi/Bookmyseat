@@ -5,7 +5,6 @@ __pycache__/
 *.py[cod]
 db.sqlite3
 staticfiles/
-media/
 .vscode/
 .idea/
 *.log
